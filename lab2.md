@@ -28,7 +28,9 @@
 Третья - любос число с плавающей точкой.
 
 print(123)
+
 print('123')
+
 print(1.23)
 
 ![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pic1/pic.png)
@@ -41,7 +43,9 @@ print(1.23)
 сложения или вычитания минимум двух переменных типа int и float.
 
 print(103838+249903)
+
 print(643.23-283.19)
+
 print(95-1.05+321-34.84)
 
 ![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pic1/pic1.png)
@@ -55,10 +59,13 @@ print(95-1.05+321-34.84)
 print('Доброе утро!')
 
 word = 'Доброе'
+
 print(f"{word} утро!")
 
 one = 'Доброе '
+
 two = 'утро!'
+
 print(one+two)
 
 ![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pic1/pic2.png)
