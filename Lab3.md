@@ -26,10 +26,15 @@
 1) Создайте две переменные, значение которых будете вводить через консоль. Также составьте условие, в котором созданные ранее переменные будут сравниваться, если условие выполняется, то выведете в консоль «Выполняется», если нет, то «Не выполняется».
 
 a = int(input('Введите значение первой переменной: '))
+
 b = int(input('Введите значение второй переменной: '))
+
 if a>=b:
+
     print('Выполняется')
+    
 else:
+
     print('Не выполняется')
 
 ![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pics1/Рисунок1.png)
@@ -40,11 +45,17 @@ else:
 реализовать при помощи одной переменной, значение которой будет вводится через консоль, а также при помощи конструкций if, elif, else.
 
 a = int(input('Введите значение переменной: '))
+
 if a<0:
+
     print('Перерменная меньше 0')
+    
 elif 0< a <10:
+
     print('Переменная больше 0 и меньше 10')
+    
 else:
+
     print('Переменная больше 10')
 
 ![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pics1/Рисунок2.png)
@@ -56,10 +67,15 @@ else:
 Самостоятельно посмотрите, как работает программа со значениями которых нет в массиве numbers.
 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9,]
+
 value = int(input('Введите значение пременной: '))
+
 if value in numbers:
+
     print('Переменная есть в данном массиве')
+    
 else:
+
     print('Переменной нет в этом массиве')
 
 ![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pics1/Рисунок3.png)
@@ -71,13 +87,21 @@ else:
 переменная в указанном массиве и если да, то проверьте четная она или нет. Самостоятельно протестируйте данную программу с разными значениями переменной value.
 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9,]
+
 value = int(input('Введите значение пременной: '))
+
 if value in numbers:
+
     if value % 2 == 0:
+    
         print('Переменная четная и есть в данном массиве')
+        
     else:
+    
         print('Переменной нечетная и есть в этом массиве')
+        
 else:
+
     print(f"Переменной нет в этом массиве и она равна {value}")
 
 ![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pics1/Рисунок4.png)
@@ -88,16 +112,27 @@ else:
 5) Напишите программу, в которой циклом for значения переменной і будут меняться от 0 до 10 и посмотрите, как разные виды сравнений и операций работают в цикле.
 
 for i in range(10):
+
     print('i =  ', i)
+    
     if i == 0:
+    
         i +=2
+        
     if i == 1:
+    
         continue
+        
     if i == 2 or i == 3:
+    
         print('Переменная равна 2  или 3')
+        
     elif i in [4, 5, 6]:
+    
         print('Переменная равна 4,5 или 6')
+        
     else:
+    
         break
 
 ![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pics1/Рисунок5.png)
@@ -111,13 +146,21 @@ index=string.find(value)
 Вы берете название переменной, в которой вы хотите что-то найти, затем применяете встроенный метод find() и в нем указываете то, что вам нужно найти. Данная строка вернет индекс искомого объекта.
 
 string = 'Привет всем!'
+
 value = input()
+
 for i in string:
+
     if i == value:
+    
         index = string.find(value)
+        
         print(f"Буква'{value}' есть в строке под {index} индексом")
+        
         break
+        
 else:
+
     print(f"Буквы '{value}' нет в указанной строке")
 
 ![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pics1/Рисунок6.png)
@@ -128,8 +171,11 @@ else:
 7) Напишите программу, в которой вы наглядно посмотрите, как работает цикл fоr проходя в обратном порядке, то есть, к примеру не от 0 до 10, а от 10 до 0. В уже готовой программе показано вычитание из 100, а вам во время реализации программы будет необходимо придумать свой вариант применения обратного цикла.
 
 value = 550
+
 for i in range(15, -7, -1):
+
     value-= i
+    
     print(i, value)
 
 
@@ -143,13 +189,21 @@ for i in range(15, -7, -1):
 как указано в примере далее.
 
 value = 0
+
 while value < 100:
+
     if value == 0:
+    
         value += 10
+        
     elif value // 2>1:
+    
         value +=2
+        
     else:
+    
         value -= 2
+        
     print(value)
 
 ![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pics1/Рисунок17.png)
@@ -161,12 +215,19 @@ while value < 100:
 использовать одинаковые имена итерируемых переменных, когда вы используете вложенные циклы.
 
 value = 0
+
 for i in range(10):
+
     for j in range(10):
+    
         if i != j:
+        
             value += j
+            
         else:
+        
             pass
+            
 print(value)
 
 ![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pics1/Рисунок9.png)
@@ -177,13 +238,21 @@ print(value)
 10) Напишите программу с использованием flag, которое будет определять есть ли нечетное число в массиве. В данной задаче flag выступает в роли индикатора встречи нечетного числа в исходном массиве, четных чисел.
 
 even_array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
 flag = False
+
 for value in even_array:
+
     if value  % 2 == 1:
+    
         flag = True
+        
 if flag is True:
+
     print('В массиве есть нечетное число')
+    
 else:
+
     print('В маассиве все числа четные')
 
 ![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pics1/Рисунок10.png)
@@ -201,9 +270,13 @@ else:
 Никаких других действий или циклов использовать нельзя.
 
 number = 1
+
 for i in range(2):
+
     number *= 5
+    
     number += 1
+    
 print(number)
 
 ![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pics1/Рисунок11.png)
@@ -215,7 +288,9 @@ print(number)
 обратном порядке, и каждая буква находится в одной строке консоли.
 
 phrase = 'Hello world'
+
 for char in phrase[::-1]:
+
     print(char)
 
 ![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pics1/Рисунок12.png)
@@ -230,14 +305,23 @@ for char in phrase[::-1]:
 Результатом работы программы будет выведенный в консоль диапазон. Программа должна занимать не более 10 строчек в редакторе кода.
 
 num = int(input("Введите число от 0 до 10: "))
+
 if num >= 0 and num <= 10:
+
     if num < 4:
+    
         print("Диапазон: от 0 до 3 включительно")
+        
     elif num < 7:
+    
         print("Диапазон: от 3 до 6 включительно")
+        
     else:
+    
         print("Диапазон: от 6 до 10 включительно")
+        
 else:
+
     print("Попробуйте снова!")
 
 ![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pics1/Рисунок13.png)
@@ -252,15 +336,25 @@ else:
 • Проверьте, начинается ли предложение с "The" и заканчивается ли на "end".
 
 sentence = input("Введите предложение: ")
+
 length = len(sentence)
+
 print(f"Длина предложения: {length}")
+
 lower_sentence = sentence.lower()
+
 print(f"Нижний регистр: {lower_sentence}")
+
 vowel_count = 0
+
 vowels = ["a", "e", "i", "o", "u"]
+
 for char in lower_sentence:
+
     if char in vowels:
+    
         vowel_count += 1
+        
 print(f"Количество гласных: {vowel_count}")
 
 ![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pics1/Рисунок14.png)
@@ -270,22 +364,37 @@ print(f"Количество гласных: {vowel_count}")
 5) Составить программу из фрагментов кода.
 
 counter = 0
+
 values = [0, 2, 4, 6, 8, 10]
 
 string = 'hello'
+
 while counter != 10:
+
     memory = string
+    
     if counter in values:
+    
         string = string + ' world'
+        
     print(string)
+    
     if counter < 10:
+    
         string = memory
+        
         counter += 1
 
 while ' world' not in string:
+
     memory = ' world'
+    
     print(string + memory)
+    
     if counter > 7:
+    
+        string = ' world'
+   
 
 ![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pics1/Рисунок15.png)
 
