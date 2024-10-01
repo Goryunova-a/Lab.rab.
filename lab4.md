@@ -261,7 +261,7 @@ if figure == '1':
 elif figure == '2':
    
     triangle()
-
+print(f"площадь: {result}")
 
 ![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pic4/pic10.png)
 
