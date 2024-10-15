@@ -93,10 +93,10 @@ def tuple_sort(tpl):
         return tuple(sorted(tpl))
 if __name__ == '__main__':
     print(tuple_sort((5, 5, 3, 1, 9)))
-    print(tuple_sort((5, 5, 2.1, '1', 9)))
+    print(tuple_sort((5, 5, 2.1, 9)))
 ```
 
-![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pic6/pic5.png)
+![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pic6/pic5_1.png)
 - Данная программа сортирует кортеж, состоящий из целых чисел по возрастанию, и возвращает его
 
 Самостоятельные задания:
