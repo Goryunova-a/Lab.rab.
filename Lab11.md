@@ -29,7 +29,7 @@ numbers = [0, 1, 2, 3, 4, 5]
 for item in numbers:
     print(item)
 ```
-![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pic10/pic1.png)
+![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pic11/pic1.png)
 - В данной программе простой итератор, но у него нет гибкой настройки.
 
 
@@ -51,7 +51,7 @@ if __name__ == '__main__':
     for i in counter:
         print(i)
 ```
-![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pic10/pic1.png)
+![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pic11/pic2.png)
 - В данной программе представлен класс итератор с гибкой настройкой и удобными применением
 
 3) Генератор списка.
@@ -64,7 +64,7 @@ print('iter(a)- ', iter(a))
 for i in a:
     print(i)
 ```
-![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pic10/pic1.png)
+![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pic11/pic3.png)
 - В данной программе представлен генератор списка
 
 4) Выражения генераторы
@@ -78,7 +78,7 @@ print('seconnd')
 for i in b:
     print(i)
 ```
-![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pic10/pic1.png)
+![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pic11/pic4.png)
 - В данной программе представлены выражения генераторы
 
 
@@ -94,7 +94,7 @@ if __name__ == '__main__':
     for i in counter:
         print(i)
 ```
-![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pic10/pic1.png)
+![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pic11/pic5.png)
 - В данной программе представлен такой же счетчик, как и в первом задании, только это генератор и использует yield
 
 Самостоятельные задания:
@@ -117,8 +117,30 @@ def fib_n(n):
     return next(f)
 print(fib_n(200))
 ```
-![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pic10/pic1.png)
+![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pic11/pic6.png)
 - Данная программа эффективно рассчитывает числа Фибоначчи без необходимости хранить всю последовательность в памяти, что делает её подходящей даже для больших значений n.
 
 2) К коду предыдущей задачи добавьте запоминание каждого числа Фибоначчи в файл "fib.txt", при этом каждое число должно
 находиться на отдельной строчке. Результатом выполнения задачи будет листинг кода и скриншот получившегося файла
+```python
+def fib():
+    a, b = 0, 1
+    with open("fib.txt", "w") as file:
+        while True:
+            file.write(str(b) + "\n")
+            yield b
+            a, b = b, a + b
+
+def fib_n(n):
+    if n == 0:
+        return 0
+    f = fib()
+    for _ in range(n):
+        next(f)
+    return next(f)
+
+result = fib_n(200)
+print(result)
+```
+![Меню](https://github.com/Goryunova-a/Lab.rab./blob/main/pic11/pic7.png)
+- Данная программа запоминает и записывает в файл каждое чbсло фибоначи в вдие отдельной строчки
